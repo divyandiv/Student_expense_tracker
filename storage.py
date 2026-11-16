@@ -10,12 +10,7 @@ def load_expenses(filename="expenses.json"):
             return json.load(f)
     except FileNotFoundError:
         return []
-def load_expenses(filename="expenses.json"):
-    try:
-        with open(filename, "r") as f:
-            return json.load(f)
-    except FileNotFoundError:
-        return []
+
 def delete_expense(expenses, index):
     if 0 <= index < len(expenses):
         removed = expenses.pop(index)
